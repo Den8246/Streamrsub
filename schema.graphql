@@ -1,0 +1,50 @@
+type _UpdatedTokenInformation @entity {
+  id: ID!
+  count: BigInt!
+  newName: String! # string
+  newSymbol: String! # string
+}
+
+type _Transfer @entity {
+  id: ID!
+  count: BigInt!
+  from: Bytes!
+  to: Bytes!
+  value: BigInt!
+}
+
+type _Upgrade @entity {
+  id: ID!
+  count: BigInt!
+  _from: Bytes!
+  _to: Bytes!
+  _value: BigInt!
+}
+
+type _UpgradeAgentSet @entity {
+  id: ID!
+  count: BigInt!
+  agent: Bytes!
+}
+
+type _MintingAgentChanged @entity {
+  id: ID!
+  count: BigInt!
+  addr: Bytes!
+  state: Boolean!
+}
+
+type _Minted @entity {
+  id: ID!
+  count: BigInt!
+  receiver: Bytes!
+  amount: BigInt!
+}
+
+  type _Approval @entity {
+  id: ID!
+  count: BigInt!
+  owner: Bytes!
+  spender: Bytes!
+  value: BigInt!
+}
